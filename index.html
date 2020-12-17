@@ -34,8 +34,8 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
-  <!-- <script>
+  <script src="js/vconsole.min.js"></script> -->
+  <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
   </script> -->
@@ -79,7 +79,7 @@
 	  document.getEnvironmentById("accessToken").append(liff.getaccessToken())
 	  document.getEnvironmentById("isInClient").append(liff.getisInClient())
 	  if (liff.getisInClient()){
-		document.etEnvironmentById("btnLogOut").style.display = "none"
+	    document.etEnvironmentById("btnLogOut").style.display = "none"
 	  } else {
 		document.getEnvironmentById("btnMsg").style.display = "none"
 		document.getEnvironmentById("btnScanCode").style.display = "none"
