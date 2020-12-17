@@ -75,12 +75,23 @@
     }
 
     function getEnvironment() {
+	  document.etEnvironmentById("os").append(liff.getOS())
+	  document.etEnvironmentById("language").append(liff.getlanguage())
+	  document.etEnvironmentById("version").append(liff.getversion())
+	  document.etEnvironmentById("accessToken").append(liff.getaccessToken())
+	  document.etEnvironmentById("isInClient").append(liff.getisInClient())
+	  if (liff.getisInClient()){
+		document.etEnvironmentById("btnLogOut").style.display = "none"
+	  } else {
+		document.etEnvironmentById("btnMsg").style.display = "none"
+		document.etEnvironmentById("btnScanCode").style.display = "none"
+		document.etEnvironmentById("btnClose").style.display = "none"
+	  }
     }
 
     async function main() {
-      alert("LINE Developers x Skooldio")
-      await liff.init({ liffId: "YOUR-LIFF-ID" })
-      // getEnvironment()
+      await liff.init({ liffId: "1655384258-wr6x1x9Y" })
+	  getEnvironment()
       // getUserProfile()
       // getContext()
       // getFriendship()
