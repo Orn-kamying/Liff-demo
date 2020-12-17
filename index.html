@@ -29,7 +29,6 @@
   <p><a href="liff/path/?param=9">Link to Path</a></p>
 
   <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
   <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
@@ -41,7 +40,7 @@
     console.log("Hello World!")
   </script> -->
 
-  <!-- <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script> -->
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script> -->
   <script>
     function createUniversalLink() {
     }
@@ -74,17 +73,17 @@
     }
 
     function getEnvironment() {
-	  document.etEnvironmentById("os").append(liff.getOS())
-	  document.etEnvironmentById("language").append(liff.getlanguage())
-	  document.etEnvironmentById("version").append(liff.getversion())
-	  document.etEnvironmentById("accessToken").append(liff.getaccessToken())
-	  document.etEnvironmentById("isInClient").append(liff.getisInClient())
+	  document.getEnvironmentById("os").append(liff.getOS())
+	  document.getEnvironmentById("language").append(liff.getlanguage())
+	  document.getEnvironmentById("version").append(liff.getversion())
+	  document.getEnvironmentById("accessToken").append(liff.getaccessToken())
+	  document.getEnvironmentById("isInClient").append(liff.getisInClient())
 	  if (liff.getisInClient()){
 		document.etEnvironmentById("btnLogOut").style.display = "none"
 	  } else {
-		document.etEnvironmentById("btnMsg").style.display = "none"
-		document.etEnvironmentById("btnScanCode").style.display = "none"
-		document.etEnvironmentById("btnClose").style.display = "none"
+		document.getEnvironmentById("btnMsg").style.display = "none"
+		document.getEnvironmentById("btnScanCode").style.display = "none"
+		document.getEnvironmentById("btnClose").style.display = "none"
 	  }
     }
 
